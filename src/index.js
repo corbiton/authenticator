@@ -1,6 +1,7 @@
 const app = require('express')();
 const bodyParser = require('body-parser');
 const defaultRouter = require('./routes/default-router');
+const authRouter = require('./routes/auth-router');
 
 const PORT = process.env.PORT || 5000;
 
@@ -17,6 +18,7 @@ app.use(function (req, res, next) {
 
 // Register routers
 app.use('/', defaultRouter);
+app.use('/api/auth', authRouter);
 
 // Run
 app.listen(PORT, () => {
