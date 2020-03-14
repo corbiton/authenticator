@@ -27,7 +27,7 @@
     "axios": "^0.19.2",
     "jest": "^25.1.0"
   },
-   "jest": {
+  "jest": {
     "testEnvironment": "node",
     "coveragePathIgnorePatterns": [
       "/node_modules/"
