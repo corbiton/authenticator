@@ -1,0 +1,16 @@
+  
+language: node_js
+node_js:
+  - '10'
+script: echo "Running tests against $(node -v)..."
+jobs:
+  include:
+    - stage: Install Dependencies
+      script:
+        - npm install
+    - stage: Run Tests
+      script:
+        - npm run test  
+branches:
+  only:
+    - master
