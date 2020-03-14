@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,15 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.20.11"
+  },
+  "devDependencies": {
+    "axios": "^0.19.2",
+    "jest": "^25.1.0"
+  },
+   "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
