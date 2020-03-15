@@ -10,7 +10,7 @@
     <li><code>docker run -p 8500:5000 -d image_name</code></li>
  </ol>
  
- <code>Go to browser and hit url  </code> - `http://localhost:5000`
+ <code>Go to browser and hit url  </code> - `http://localhost:8500`
  
  🎉 :tada: 🎉 :tada: 🎉 :tada: 🎉 :tada: 🎉 :tada: 🎉 :tada: 🎉 :tada: 
  
