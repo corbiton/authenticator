@@ -22,11 +22,22 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "knex": "^0.20.11"
+    "knex": "^0.20.11",
+    "lint-staged": "^10.0.8",
+    "save-dev": "0.0.1-security"
   },
   "devDependencies": {
     "axios": "^0.19.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-react": "^7.19.0",
+    "husky": "^4.2.3",
     "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
     "sqlite3": "^4.1.1"
   },
   "jest": {
@@ -34,5 +45,13 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/"
     ]
-  }
+  },
+  "husky": {
+    "hooks": {
+        "pre-commit": "lint-staged"
+    }
+},
+"lint-staged": {
+    "src/**/*.{js,jsx}": ["eslint", "pretty-quick — staged", "git add"]
+}
 }
