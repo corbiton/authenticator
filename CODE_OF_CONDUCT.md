@@ -9,6 +9,36 @@ size, disability, ethnicity, sex characteristics, gender identity and expression
 level of experience, education, socio-economic status, nationality, personal
 appearance, race, religion, or sexual identity and orientation.
 
+## steps 
+GIT Steps:   
+fork from the main repo to ur account
+1-git clone 
+2-git config user.email "{}"
+3-git config user.name "{}"
+4-git checkout -b "branchname"
+5-git status
+6-git diff
+7- git add . // stagging
+8- git commit -m "------ (#fix no) " //committing
+9-  git push origin ....  //pushing to local branch
+git push origin .... -f  // to force push
+
+- go to ur github page and it will show campare&pullrequest
+
+// to setup our branch in our account in sync with the main corbition branch
+10 -git checkout master
+11- git remote add upstream "https://github.com/corbiton/authenticator.git"
+12-  git fetch upstream   (pull = fetch +merge) 
+    // From https://github.com/corbiton/authenticator
+    //* [new branch]      master     -> upstream/master
+  $ git rebase upstream/master 
+
+// to ammend a commit
+ git commit --amend --author="Abdul Wahed <abdul.wahed11314@gmail.com>"
+  git push origin fix-readme -f
+
+
+
 ## Our Standards
 
 Examples of behavior that contributes to creating a positive environment
