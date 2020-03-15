@@ -6,7 +6,7 @@
  
  `Navigate to docker file location` 
  <ol>
-    <li><code>docker build -t <image_name></image_name> . <username/App-Name> </code></li>
+    <li><code>docker build -t <image_name> <username/App-Name> </code></li>
     <li><code>docker run -p 8500:5000 -d <image_name> </image_name></code></li>
  </ol>
  
