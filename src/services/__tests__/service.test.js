@@ -4,7 +4,6 @@ describe('AuthService.js >> auth service should validate',()=>{
 
     test('whether AuthService is accessible',()=>{
         expect(AuthService).toBeTruthy()
-        const { login } = AuthService
     })
 
     test('whether AuthService has login function',()=>{
