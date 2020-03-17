@@ -1,25 +1,26 @@
-const db = require('../config/knex');
+const db = require("../config/knex");
 
-const TABLE = 'user';
+const TABLE = "user";
 
 class User {
-    save (user) {
-        return db.table(TABLE)
-            .insert(user);
-    }
+  save(user) {
+    return db.table(TABLE).insert(user);
+  }
 
-    delete (username) {
-        return db.table(TABLE)
-            .where({username: username})
-            .del();
-    }
+  delete(username) {
+    return db
+      .table(TABLE)
+      .where({ username: username })
+      .del();
+  }
 
-    get (username) {
-        return db.table(TABLE)
-            .select('username', 'password')
-            .where({username: username})
-            .limit(1);
-    }
+  get(username) {
+    return db
+      .table(TABLE)
+      .select("username", "password")
+      .where({ username: username })
+      .limit(1);
+  }
 }
 
 export default new User();

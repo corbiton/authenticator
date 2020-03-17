@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node src",
     "test": "jest",
-    "test:w": "jest --watch"
+    "test:w": "jest --watch",
+    "lint": "eslint src/",
+    "lint:fix": "prettier-eslint '**.*js' --write"
   },
   "repository": {
     "type": "git",
@@ -37,6 +39,8 @@
     "husky": "^4.2.3",
     "jest": "^25.1.0",
     "prettier": "^1.19.1",
+    "prettier-eslint": "^9.0.1",
+    "prettier-eslint-cli": "^5.0.0",
     "pretty-quick": "^2.0.1",
     "sqlite3": "^4.1.1"
   },
@@ -48,10 +52,14 @@
   },
   "husky": {
     "hooks": {
-        "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged"
     }
-},
-"lint-staged": {
-    "src/**/*.{js,jsx}": ["eslint", "pretty-quick — staged", "git add"]
-}
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run lint:fix",
+      "pretty-quick — staged",
+      "git add"
+    ]
+  }
 }
