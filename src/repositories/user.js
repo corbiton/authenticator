@@ -3,19 +3,19 @@ const db = require("../config/knex");
 const TABLE = "user";
 
 class User {
-  save(user) {
-    return db.table(TABLE).insert(user);
+  async save(user) {
+    return await db.table(TABLE).insert(user);
   }
 
-  delete(username) {
-    return db
+  async delete(username) {
+    return await db
       .table(TABLE)
       .where({ username: username })
       .del();
   }
 
-  get(username) {
-    return db
+  async get(username) {
+    return await db
       .table(TABLE)
       .select("username", "password")
       .where({ username: username })
@@ -23,4 +23,4 @@ class User {
   }
 }
 
-export default new User();
+module.exports = new User();
